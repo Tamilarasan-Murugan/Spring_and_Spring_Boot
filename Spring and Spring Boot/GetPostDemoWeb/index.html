@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h2>Hai Tamilarasan!</h2><br>
+    <button onclick="getStudents()">Show Content</button>
+    <a href="register.html">Register !</a>
+
+
+
+    <script>
+        function getStudents(){
+        fetch("http://localhost:8080/students")//API Endpoint
+        .then((response) => response.json())// Json conversion
+        .then((data) => console.log(data))// Logging the data
+        }
+    </script>
+</body>
+</html>
